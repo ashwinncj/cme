@@ -16,7 +16,7 @@ class Mail extends CI_Controller {
     public function index() {
         $this->load->view('templates/radel/header');
         $this->load->view('templates/radel/navigation');
-        $this->load->view('landing');
+        //$this->load->view('landing');
         $this->load->view('templates/radel/footer');
         $this->mailer->mailgun('ashwin@radelcorp.in','Verification Mailgun','Mailgun API test from the site.');
     }

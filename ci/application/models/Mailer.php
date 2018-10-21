@@ -46,6 +46,7 @@ class Mailer extends CI_Model {
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
         $result = curl_exec($ch);
+        print_r($result);
         curl_close($ch);
     }
 
