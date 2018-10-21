@@ -36,7 +36,7 @@ class Mailer extends CI_Model {
         $username = '';
         $password = '';
         $url = '';        
-        $params=['from'=>'','to'=>$to,'subject'=>$subject,'text'=>$text];        
+        $params=['from'=>'ashwin@mail.radel.site','to'=>$to,'subject'=>$subject,'text'=>$text];        
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout after 30 seconds
