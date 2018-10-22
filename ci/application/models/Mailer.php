@@ -35,8 +35,8 @@ class Mailer extends CI_Model {
     public function mailgun($to, $subject, $text) {
         $url = 'http://mailer.constructme.ae/mailer.php';
         //$url = 'localhost/cme-mailer/mailer.php';
-        $from = 'ConstructMe <technical@constructme.ae>';
-        $params = ['from' => $from, 'to' => $to, 'subject' => $subject, 'text' => $text];
+        $from = 'ConstructMe <mail@tech.constructme.ae>';
+        $params = ['from' => $from, 'to' => $to, 'subject' => $subject, 'text' => $text,'h:Reply-To'=>'technical@constructme.ae'];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout after 30 seconds
