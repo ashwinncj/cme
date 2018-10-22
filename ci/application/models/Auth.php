@@ -46,12 +46,22 @@ class Auth extends CI_Model {
         }
         $password = $this->password($params['user_password']);
         $businesstype = $params['user_business_type'];
+        $hash = md5(uniqid());
         $data = array(
             'user_email' => $email,
             'user_password' => $password,
-            'user_business_type' => $businesstype
+            'user_business_type' => $businesstype,
+            'email_verified' => '0',
+            'hash' => $hash
         );
         $status = $this->db->insert('constructme_data', $data) ? TRUE : FALSE;
+        if ($status) {
+            $this->load->model('mailer');
+            $html='<p>Please verify your account by clicking on the link below.</p>';
+            $html.='<p>'.base_url('verify/').$email.'/'.$hash.'</p>';
+            $html.='<h4>ConstructMe</h4><h5>www.constructme.ae</h5>';
+            $this->mailer->mailgun($email,'Verify Email Address',$html);
+        }
         return $status;
     }
 
