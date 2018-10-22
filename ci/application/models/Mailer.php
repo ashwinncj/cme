@@ -35,7 +35,7 @@ class Mailer extends CI_Model {
     public function mailgun($to, $subject, $text) {
         $url = 'http://mailer.constructme.ae/mailer.php';
         //$url = 'localhost/cme-mailer/mailer.php';
-        $from = 'Excited User <ashwin@radel.space>';
+        $from = 'ConstructMe <technical@constructme.ae>';
         $params = ['from' => $from, 'to' => $to, 'subject' => $subject, 'text' => $text];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -48,5 +48,4 @@ class Mailer extends CI_Model {
         print_r($result);
         curl_close($ch);
     }
-
 }
