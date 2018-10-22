@@ -18,7 +18,7 @@ class Mail extends CI_Controller {
         $this->load->view('templates/radel/navigation');
         //$this->load->view('landing');
         $this->load->view('templates/radel/footer');
-        $this->mailer->mailgun('ashwinncj@gmail.com', 'Verification your email address.', 'Please verify your email address to create account.');
+        $this->mailer->mailgun('ashwin@radelcorp.in', 'Verify your account.', '<h2>Please verify your email address to create account.</h2><br>');
     }
 
 }
