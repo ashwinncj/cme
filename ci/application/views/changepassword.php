@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <head>
-    <title>ConstructMe - Signup</title>
+    <title>ConstructMe - Login</title>
     <?php $this->load->view('templates/header'); ?>
     <style>
         .login-clean {
@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
 
         .login-clean form {
-            max-width:400px;
+            max-width:350px;
             width:90%;
             margin:0 auto;
             background-color:#ffffff;
@@ -74,27 +74,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             opacity:1;
             text-decoration:none;
         }
-        .createaccount-text{
-            margin-bottom: 10px;
+        .login-text{
+            margin:10px;
         }
-
     </style>
 </head>
 <body>
     <?php $this->load->view('templates/navigation'); ?>
+
     <div class="login-clean">
-        <form method="post" action="<?php echo base_url('signup/submit'); ?>" style="text-align:center;">
+        <form method="post" action="<?php echo base_url('resetpassword/confirm'); ?>" style="text-align:center;">
             <p style="color: red">
                 <?php
-                if (isset($_SESSION['error_msg'])) {
-                    echo $_SESSION['error_msg'];
-                    unset($_SESSION['error_msg']);
+                if (isset($error_msg)) {
+                    echo $error_msg;
                 }
                 ?>
             </p>
-            <p class="createaccount-text" style="font-size:24px;color:#009688;">Create Account</p>
-            <a href="#"><img src="<?php echo base_url(); ?>assets/img/Constructme-logo.png" style="text-align:center;width:65%;margin-bottom: 10px;"></a>
-            <div class="form-group"><input class="form-control" required type="email" name="user_email" placeholder="Email"></div>
+            <p class="login-text" style="font-size:24px;color:#009688;">Reset Password</p>
+            <a href="#"><img src="<?php echo base_url(); ?>assets/img/Constructme-logo.png" style="width:65%;text-align:center;margin-bottom: 10px;"></a>
             <div class="form-group"><input class="form-control passwordcustom" required type="password" name="user_password" placeholder="Password"></div>
             <div class="form-group"><input class="form-control passwordcustom" required type="password" name="user_confirmpassword" placeholder="Confirm Password">
                 <div style="text-align: left;padding-left: 10px">
@@ -102,21 +100,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="form-group">
-                <select  name="user_business_type" required class="form-control" readonly="">
-                    <optgroup label="Business Activity">
-                        <option value="user_main_contractor">Main Contractor</option>
-                        <option value="user_specialist_contractor" >Specialist Contractor</option>
-                        <option value="user_material_supplier" >Material Supplier</option>
-                        <option value="user_client" >Client</option>
-                        <option value="user_consultant_serviceprovider">Consultant - Service provided</option>
-                    </optgroup>
-                </select>
-                <div style="margin-top:10px;"><input required type="checkbox" style="width:12px;height:12px;">
-                    <span>I agree to the<a href="<?php echo base_url('terms'); ?>"> Terms and Conditions</a></span>
-                </div>
+                <button class="btn btn-primary btn-block" type="submit" style="background-color:#009688;">Reset</button>
             </div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">REGISTER</button></div>
-        </form>
+            <a href="<?php echo base_url('resetpassword'); ?>" class="forgot">Forgot Password? Click here</a>
+            <a href="<?php echo base_url('signup'); ?>" class="forgot">New User? Sign Up</a></form>
     </div>
     <?php $this->load->view('templates/footer'); ?>
     <script>

@@ -25,6 +25,8 @@ class Login extends CI_Controller {
         $password = $this->auth->password($this->input->post('user_password'));
         $auth = $this->auth->authenticate($user, $password);
         if ($auth) {
+            $this->load->model('user');
+            $_SESSION['email_verified'] = $this->user->is_email_verified($email);
             $_SESSION['user_logged'] = 'true';
             $_SESSION['user_email'] = $user;
             redirect('/login/success/');

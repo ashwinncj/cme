@@ -96,13 +96,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form-group">
                 <input class="form-control" required type="email" name="user_email" placeholder="Email"></div>
             <div class="form-group">
-                <input class="form-control" required type="password" name="user_password" placeholder="Password">
+                <input class="form-control passwordcustom" required type="password" name="user_password" placeholder="Password">
+                <div style="text-align: left;padding-left: 10px">
+                    <input id="showpassword" type="checkbox"><span style="padding-left: 10px;font-size: 14px">Show password</span>
+                </div>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit" style="background-color:#009688;">Log In</button>
             </div>
-            <a href="#" class="forgot">Forgot Password? Click here</a>
+            <a href="<?php echo base_url('resetpassword'); ?>" class="forgot">Forgot Password? Click here</a>
             <a href="<?php echo base_url('signup'); ?>" class="forgot">New User? Sign Up</a></form>
     </div>
     <?php $this->load->view('templates/footer'); ?>
+    <script>
+        $('#showpassword').change(function () {
+            if ($(this).is(":checked")) {
+                $('.passwordcustom').attr('type', 'text');
+            } else {
+                $('.passwordcustom').attr('type', 'password');
+            }
+        });
+    </script>
 </body>
