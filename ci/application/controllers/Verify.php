@@ -11,12 +11,12 @@ class Verify extends CI_Controller {
     }
 
     public function index() {
-        echo 'Stage1';
+        redirect('home');
     }
 
     public function account($email = 'default', $hash = 'default') {
         $status = $this->user->verify_user($email, $hash);
-        $status ? redirect('dashboard') : $_SESSION['error_msg']='Your email is verified. Please log in below.' AND redirect('login');        
+        $status ? redirect('dashboard') : $_SESSION['error_msg'] = 'Your email is verified. Please log in below.' AND redirect('login');
     }
 
     public function pending() {

@@ -23,6 +23,11 @@ class Resetpassword extends CI_Controller {
         isset($_POST['user_email']) ? FALSE : redirect('/login');
         $user = $this->input->post('user_email');
         $auth = $this->auth->reset_password($user);
+        $auth ? TRUE : redirect('home');
+        $this->load->view('templates/radel/header');
+        $this->load->view('templates/radel/navigation');
+        $this->load->view('resetlinksent');
+        $this->load->view('templates/radel/footer');
     }
 
     public function success() {

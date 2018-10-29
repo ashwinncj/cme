@@ -86,10 +86,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p style="margin:0px">Please select appropriate business activities.</p>
             <a style="font-size: 14px" href="<?php echo base_url('dashboard'); ?>"><- Go back</a>
             <hr>                
+            <input type="checkbox" id="selectall"><span style="padding-left: 5px;">Select All</span>
+
             <form method="post" action="<?php echo base_url('profile/update'); ?>">
 
                 <div class="column-list">
-
                     <table id="business-activity-table">
                         <?php
                         $data[] = '';
@@ -188,13 +189,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         foreach ($business_activities as $name => $value) {
                             (in_array($name, $data) ? $check_yes = 'checked' AND $check_no = '' : $check_no = 'checked' AND $check_yes = '');
                             ?>
+                            <!--                            <tr style="padding:0px;margin-bottom: 10px">
+                                                            <td style="width: 60px">             
+                                                                <div class="switch-field">
+                                                                    <input type="radio" id="selectall_yes" value="true"/>
+                                                                    <label for="selectall_yes"></label>
+                                                                    <span  class="radio_no">
+                                                                        <input type="radio" id="selectall_no" value="false" checked />
+                                                                        <label for="selectall_no" style=""></label>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="title" style="padding-left:5px">Select All</span>
+                                                            </td>
+                                                        </tr>-->
                             <tr style="padding:0px;margin-bottom: 10px">
                                 <td style="width: 60px">             
                                     <div class="switch-field">
-                                        <input type="radio" id="<?php echo $name; ?>_yes" name="ba_<?php echo $name; ?>" value="true" <?php echo $check_yes; ?>/>
+                                        <input class="check_yes" type="radio" id="<?php echo $name; ?>_yes" name="ba_<?php echo $name; ?>" value="true" <?php echo $check_yes; ?>/>
                                         <label for="<?php echo $name; ?>_yes"></label>
                                         <span  class="radio_no">
-                                            <input type="radio" id="<?php echo $name; ?>_no" name="ba_<?php echo $name; ?>" value="false" <?php echo $check_no; ?>/>
+                                            <input class="check_no" type="radio" id="<?php echo $name; ?>_no" name="ba_<?php echo $name; ?>" value="false" <?php echo $check_no; ?>/>
                                             <label for="<?php echo $name; ?>_no" style=""></label>
                                         </span>
                                     </div>
@@ -214,6 +230,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </form>
         </div>
         <?php $this->load->view('templates/footer'); ?>
+        <script>
+            $('#selectall').change(function () {
+                if ($(this).is(":checked")) {
+                    $('.check_yes').prop('checked', 'true');
+                } else {
+                    $('.check_no').prop('checked', 'true');
+                }
+            });
+        </script>
 
     </body>
 </html>
