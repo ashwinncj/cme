@@ -33,10 +33,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <label>COMPANY NAME</label> :<span class="info-details"><?php echo isset($info['company_name']) ? $info['company_name'] : ''; ?></span><br>
             <label>LOCATION</label> :<span class="info-details"><?php echo isset($info['location']) ? $info['location'] : ''; ?></span><br>
             <label>ADDRESS</label> :<span class="info-details"><?php echo isset($info['address']) ? $info['address'] : ''; ?></span><br>
+            <label>P.O. Box</label> :<span class="info-details"><?php echo isset($info['po_box']) ? $info['po_box'] : ''; ?></span><br>
             <label>WEBPAGE</label> :<span class="info-details"><?php echo isset($info['webpage']) ? $info['webpage'] : ''; ?></span><br>
             <label>ABOUT COMPANY</label> :<span class="info-details"><?php echo isset($info['about_company']) ? $info['about_company'] : ''; ?></span><br>
             <label>CONTACT PERSON</label> :<span class="info-details"><?php echo isset($info['contact_person']) ? $info['contact_person'] : ''; ?></span><br>
-            <label>CONTACT NUMBER </label> :<span class="info-details"><?php echo isset($info['phone_number']) ? $info['phone_number'] : ''; ?></span><br>
+            <label>MOBILE NUMBER </label> :<span class="info-details"><?php echo isset($info['mobile_number']) ? $info['mobile_number'] : ''; ?></span><br>
+            <label>LANDLINE NUMBER </label> :<span class="info-details"><?php echo isset($info['landline_number']) ? $info['landline_number'] : ''; ?></span><br>
             <label>CATEGORY</label> :<span class="info-details"><?php echo isset($info['category']) ? $info['category'] : ''; ?></span><br>
         </div>
         <div style="border-bottom:1px solid #e2dfdf;padding: 20px">

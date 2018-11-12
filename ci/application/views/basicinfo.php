@@ -57,6 +57,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <td><input  type="text" name="address" value="<?php echo isset($info['address']) ? $info['address'] : ''; ?>" style="width:100%;"></td>
                                     </tr>
                                     <tr>
+                                        <td><label>P.O. BOX</label></td>
+                                        <td>:<br></td>
+                                        <td><input  type="text" name="po_box" value="<?php echo isset($info['po_box']) ? $info['po_box'] : ''; ?>" style="width:100%;"></td>
+                                    </tr>
+                                    <tr>
                                         <td><label>WEBPAGE</label></td>
                                         <td>:<br></td>
                                         <td><input type="text" placeholder="www.webpage.com" name="webpage" value="<?php echo isset($info['webpage']) ? $info['webpage'] : ''; ?>" style="width:100%;"></td>
@@ -72,11 +77,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <td><input type="text" placeholder="Name" name="contact_person" style="width:100%;" value="<?php echo isset($info['contact_person']) ? $info['contact_person'] : ''; ?>"></td>
                                     </tr>
                                     <tr>
-                                        <td><label>CONTACT NUMBER</label></td>
+                                        <td><label>MOBILE NUMBER</label></td>
                                         <td>:<br></td>
                                         <td>
 <!--<input type="text" placeholder="Country Code" name="country_code" style="margin-right:10px;">-->
-                                            <input type="text" placeholder="Phone Number" value="<?php echo isset($info['phone_number']) ? $info['phone_number'] : ''; ?>" name="phone_number" style="width:55%;"></td>
+                                            <input type="text" placeholder="Mobile Number" value="<?php echo isset($info['mobile_number']) ? $info['mobile_number'] : ''; ?>" name="mobile_number" style="width:55%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>LANDLINE NUMBER</label></td>
+                                        <td>:<br></td>
+                                        <td>
+                                            <input type="text" placeholder="Landline Number" value="<?php echo isset($info['landline_number']) ? $info['landline_number'] : ''; ?>" name="landline_number" style="width:55%;"></td>
                                     </tr>
                                     <tr>
                                         <td><label>CATEGORY</label></td>
