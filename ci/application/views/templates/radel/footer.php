@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         display:inline-block;
     }
     .item{
-        background-color: #fff;
+        /*background-color: #fff;*/
         color: #444;
         position: relative;
         z-index: 2;
@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         width:35px;
     }
     @media (max-width: 478px){
-        .footer-clean .item.social {
+        .footer-clean .item .social {
             text-align: center;
 
         }

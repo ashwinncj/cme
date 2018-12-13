@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
     .feature-listing .feature-box{
         width: 90%;
-        height: 250px;
+        min-height: 250px;
         margin: auto;
         border: 3px solid white;
         margin-bottom: 30px;
@@ -55,8 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-12 text-center" style="padding-bottom: 20px">
             <p style="font-size: 36px;"><span style="border-bottom: 1px solid red;color: black;font-family: Roboto">Key Offerings</span></p>
         </div>
-        <div class="col-md-12">
-            <div class="col-md-4 feature-listing">
+        <div class="col-md-12 row">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Vendor Registry</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/ellipse.png'); ?>">
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 feature-listing">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Company Profiles</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/2.png'); ?>">
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 feature-listing">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Material Comparison</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/3.png'); ?>">
@@ -83,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 feature-listing">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Bid Comparison</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/4.png'); ?>">
@@ -92,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 feature-listing">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Cloud Storage</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/5.png'); ?>">
@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 feature-listing">
+            <div class="col-md-4 col-sm-6 feature-listing">
                 <div class="feature-box">
                     <span class="title">Online tracking</span><br>
                     <img class="image" src="<?php echo base_url('assets/img/6.png'); ?>">
