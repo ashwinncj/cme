@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <p>Procurement Made Easy</p>
             </a>
         </div>
-        <div class="col-md-8 text-right" style="padding-top: 15px">
+        <div class="col-md-8 text-right hidden-xs" style="padding-top: 15px">
             <ul>
                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url('home'); ?>">HOME</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url('features'); ?>">FEATURES</a></li>
