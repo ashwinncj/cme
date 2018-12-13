@@ -2,6 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <style>
+    .nav-item{
+        display: inline;
+        padding: 15px;
+        font-size: 15px;
+    }
     .navigation-clean.navbar .navbar-nav .nav-link,.navigation-clean.navbar .navbar-nav>li>a{
         padding-left:18px;
         padding-right:18px
@@ -90,34 +95,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
     }
 </style>    
-<nav class="navbar navbar-light navbar-expand-md navigation-clean" style="padding:0px 10px;">
-    <div class="container" style="padding-left:0px;">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>" style="">
-            <img class="navbar-logo" src="<?php echo base_url(); ?>assets/img/Constructme-logo.png" style="">
-            <p class="logo-tagline" style="">Procurement Made Easy</p>
-        </a>
-
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div
-            class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('home'); ?>">HOME</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('features'); ?>">FEATURES</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('pricing'); ?>">PRICING</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('about'); ?>">ABOUT</a></li>
+<div class="col-md-12" style="box-shadow: 0px 0px 2px 0px violet;">
+    <div class="col-md-10 col-md-offset-1" style="padding: 0px;padding-top :10px;">
+        <div class="col-md-4">
+            <a href="<?php echo base_url(); ?>" style="">
+                <img src="<?php echo base_url(); ?>assets/img/Constructme-logo.png" style="width: 280px">
+                <p>Procurement Made Easy</p>
+            </a>
+        </div>
+        <div class="col-md-8 text-right" style="padding-top: 15px">
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('home'); ?>">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('features'); ?>">FEATURES</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('pricing'); ?>">PRICING</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('about'); ?>">ABOUT</a></li>
                 <?php
                 if (isset($_SESSION['user_logged']) AND isset($_SESSION['user_email'])) {
                     ?>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('dashboard'); ?>">DASHBOARD</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('logout'); ?>">LOGOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url('dashboard'); ?>">DASHBOARD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url('logout'); ?>">LOGOUT</a></li>
                     <?php
                 } else {
                     ?>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('login'); ?>">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url('login'); ?>">LOGIN</a></li>
                         <?php
                     }
                     ?>
             </ul>
         </div>
     </div>
-</nav>
+</div>
