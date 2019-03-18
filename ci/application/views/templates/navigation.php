@@ -102,7 +102,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('home'); ?>">HOME</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('features'); ?>">FEATURES</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('pricing'); ?>">PRICING</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('about'); ?>">ABOUT</a></li>
                 <?php
